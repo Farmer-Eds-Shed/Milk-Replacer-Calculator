@@ -9,6 +9,18 @@
     <h1>Milk Replacer Calculator</h1>
     <label for="calves">Number of Calves:</label>
     <input type="number" id="calves" name="calves" min="1" required>
+    <label for="age">Age of Calves:</label>
+    <select id="age" name="age">
+        <option value="4-7_days">4-7 Days</option>
+        <option value="week_2">Week 2</option>
+        <option value="week_3">Week 3</option>
+        <option value="week_4">Week 4</option>
+        <option value="week_5">Week 5</option>
+        <option value="week_6">Week 6</option>
+        <option value="week_7">Week 7</option>
+        <option value="week_8">Week 8</option>
+        <option value="week_9">Week 9</option>
+    </select>
     <button onclick="calculateMilkReplacer()">Calculate</button>
     <p id="result"></p>
 
