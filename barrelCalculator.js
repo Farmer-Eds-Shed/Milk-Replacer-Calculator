@@ -7,12 +7,16 @@ function calculateWaterHeight() {
         return;
     }
 
-    const radiusCm = diameterCm / 2; // Radius in centimeters
-    const radiusM = radiusCm / 100; // Convert radius to meters
-    const volumeM3 = volumeLiters / 1000; // Convert liters to cubic meters
+    const radiusCm = diameterCm / 2;
+    const radiusM = radiusCm / 100;
+    const volumeM3 = volumeLiters / 1000;
 
-    const heightM = volumeM3 / (Math.PI * Math.pow(radiusM, 2)); // Height in meters
-    const heightCm = heightM * 100; // Convert height to centimeters
+    const heightM = volumeM3 / (Math.PI * Math.pow(radiusM, 2));
+    const heightCm = heightM * 100;
 
     document.getElementById('barrelResult').innerText = `Height of Water: ${heightCm.toFixed(2)} cm`;
+
+    // Save to localStorage
+    localStorage.setItem('diameter', diameterCm);
+    localStorage.setItem('volume', volumeLiters);
 }
