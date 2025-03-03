@@ -75,7 +75,7 @@ function calculateMilkReplacer() {
     const perFeedPowder = totalPowder / feedsPerDay;
     const perFeedWater = totalWater / feedsPerDay;
 
-    const result = `<b>Per Day:</b><br>Total Milk Replacer: ${totalLiters} L<br>Total Powder: ${(totalPowder / 1000).toFixed(2)} kg<br>Total Water: ${totalWater} L<br>Number of Feeds per Day: ${feedsPerDay}<br><b>Per Feed:</b><br>Milk Replacer: ${perFeedLiters.toFixed(2)} L<br>Powder: ${(perFeedPowder / 1000).toFixed(2)} kg<br>Water: ${perFeedWater.toFixed(2)} L`;
+    const result = `<b>Per Day:</b><br>Total Milk Replacer: ${totalLiters} L<br>Total Powder: ${(totalPowder / 1000).toFixed(2)} kg<br>Total Water: ${totalWater} L<br>Number of Feeds per Day: ${feedsPerDay}<br><br><b>Per Feed:</b><br>Milk Replacer: ${perFeedLiters.toFixed(2)} L<br>Powder: ${(perFeedPowder / 1000).toFixed(2)} kg<br>Water: ${perFeedWater.toFixed(2)} L`;
     document.getElementById('result').innerHTML = result;
 
     // Automatically fill the 'Volume of Water (in liters)' field in the barrel calculator
