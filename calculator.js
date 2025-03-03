@@ -40,6 +40,6 @@ function calculateMilkReplacer() {
     const perFeedPowder = totalPowder / feedsPerDay;
     const perFeedWater = totalWater / feedsPerDay;
 
-    const result = `Total Milk Replacer: ${totalLiters} Liters\nTotal Powder: ${(totalPowder / 1000).toFixed(2)} kg\nTotal Water: ${totalWater} Liters\nNumber of Feeds per Day: ${feedsPerDay}\n\nPer Feed: ${perFeedLiters.toFixed(2)} Liters, ${(perFeedPowder / 1000).toFixed(2)} kg of powder, ${perFeedWater.toFixed(2)} Liters of water`;
-    document.getElementById('result').innerText = result;
+    const result = `<b>Per Day:</b><br>Total Milk Replacer: ${totalLiters} L<br>Total Powder: ${(totalPowder / 1000).toFixed(2)} kg<br>Total Water: ${totalWater} L<br>Number of Feeds per Day: ${feedsPerDay}<br><br><b>Per Feed:</b><br>Milk Replacer: ${perFeedLiters} L<br>Powder: ${perFeedPowder} grams<br>Water: ${perFeedWater} L`;
+    document.getElementById('result').innerHTML = result;
 }
